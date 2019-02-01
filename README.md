@@ -1,7 +1,7 @@
-django-personal scheduler
+django personal-scheduler
 Studies and workouts scheduling app built using Django 
 
-Usage
+Usage <br>
 Clone this repo, setup virtualenv, install Django
 
 git clone https://github.com/huiwenhw/django-calendar
