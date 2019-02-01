@@ -1,3 +1,5 @@
 *.sqlite3
 venv/
 .DS_Store
+turtly/__pycache__
+personalstudies/__pycache__
