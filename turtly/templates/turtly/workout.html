@@ -1,0 +1,245 @@
+{% extends "turtly/base.html" %}
+
+
+{% block content %}
+<div id="titles">
+	<table>
+			<tr>
+				<td ><h1>Workout</h1></td>
+				<td width="10%" align="right" style="margin: 0px"></td>
+      		</tr>
+      </table>
+</div>
+
+	<div style="width: 40%; float: left; margin: 30px;">
+		<div id="workout" style="width: 100%"; >      		  
+			<h2> Arms </h2>
+			<form method="POST">
+				{{ arms.as_p }}
+				{% csrf_token %}			
+			<button type="submit"> Submit </button>
+			</form>
+   		</div>
+
+		<div id="workout" style="width: 100%";  >      		  
+			<h2> Back </h2>
+			<form method="POST">
+				{{ back.as_p }}
+				{% csrf_token %}			
+			<button type="submit"> Submit </button>
+			</form>
+
+   		</div>
+   	</div>
+
+   	<div style="width: 40%; float: left;margin: 30px;">
+   		<div id="workout" style="width: 100%;" >      		  
+			<h2> Chest </h2>
+			<form method="POST">
+				{{ chest.as_p }}
+				{% csrf_token %}			
+			<button type="submit"> Submit </button>
+			</form>
+
+   		</div>
+
+   		<div id="workout" style="width: 100%;"  >      		  
+			<h2> Legs </h2>
+			<form method="POST">
+				{{ legs.as_p }}
+				{% csrf_token %}			
+			<button type="submit"> Submit </button>
+			</form>
+
+   		</div>
+   	</div>
+		</form>
+	
+			<div class="clr"></div>
+
+{% for post in posts %}
+	<div style= "margin:30px;"></div>		
+	<div id="training_posts">	
+
+		<h1 style="text-align:left;float:left;">{{ post.date }}</h2>
+		<div class="clr"></div>
+
+        {% if post.Trapezius_Shrug %}
+        <div style="background-color: #BDCEF4">		
+			<h2 ">Trapezius Shrug</h2>
+			<h3>{{post.Trapezius_Shrug}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}		
+		{% if post.Reverse_Fly %}		
+		<div style="background-color: #BDCEF4">
+			<h2 ">Reverse Fly</h2>
+			<h3>{{post.Reverse_Fly}}</h3>
+			<hr style="clear:both;">    
+		</div>
+		{% endif %}		
+		{% if post.Dumbell_Row %}		
+		<div style="background-color: #BDCEF4">
+			<h2 ">Dumbell Row</h2>
+			<h3>{{post.Dumbell_Row}}</h3>
+			<hr style="clear:both;">    
+		</div>
+		{% endif %}		
+		{% if post.Roman_Chair %}		
+		<div style="background-color: #BDCEF4">
+			<h2 ">Roman Chair</h2>
+			<h3>{{post.Roman_Chair}}</h3>
+			<hr style="clear:both;">  
+		</div> 
+		{% endif %}
+		
+		{% if post.Shoulder_Raise %}		
+		<div style="background-color: #F6BEBE"> 
+			<h2>Shoulder Raise</h2>
+			<h3>{{post.Shoulder_Raise}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Shoulder_Press %}		
+		<div style="background-color: #F6BEBE">
+			<h2>Shoulder Press</h2>
+			<h3>{{post.Shoulder_Press}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Overhead_Triceps_Extension %}
+		<div style="background-color: #F6BEBE"> 
+			<h2>Overhead Triceps Extension</h2>
+			<h3>{{post.Overhead_Triceps_Extension}}</h3>
+			<hr style="clear:both;">
+		/>
+		{% endif %}
+		{% if post.Dips %}
+		<div style="background-color: #F6BEBE">
+			<h2>Dips</h2>
+			<h3>{{post.Dips}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Triceps_Kick_Backs %}
+		<div style="background-color: #F6BEBE#"> 
+			<h2>Triceps Kick Backs</h2>
+			<h3>{{post.Triceps_Kick_Backs}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Hammer_Curl %}
+		<div style="background-color: #F6BEBE">
+			<h2>Hammer Curl</h2>
+			<h3>{{post.Hammer_Curl}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Inner_Biceps %}
+		"<div style="background-color: #F6BEBE">
+			<h2>Inner Biceps</h2>
+			<h3>{{post.Inner_Biceps}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Bar_Curl %}
+		<div style="background-color: #F6BEBE">
+			<h2>Bar Curl</h2>
+			<h3>{{post.Bar_Curl}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Wrist_Curl %}
+		<div style="background-color: #F6BEBE">
+			<h2>Wrist Curl</h2>
+			<h3>{{post.Wrist_Curl}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		
+
+		
+
+		
+		
+    	{% if post.Bench_Press %}	
+    	<div style="background-color: #FAF6B7">
+			<h2 ">Bench Press</h2>
+			<h3>{{post.Bench_Press}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Dumbell_Press %}
+		<div style="background-color: #FAF6B7">
+			<h2 ">Dumbell Press</h2>
+			<h3>{{post.Dumbell_Press}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Fly %}
+		<div style="background-color: #FAF6B7">
+			<h2 ">Fly</h2>
+			<h3>{{post.Fly}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Push_Ups %}
+		<div style="background-color: #FAF6B7">
+			<h2 ">Push Ups</h2>
+			<h3>{{post.Push_Ups}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+
+		{% if post.Squat %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Squats</h2>
+			<h3>{{post.Squat}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Walking_Lunge %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Walking Lunge</h2>
+			<h3>{{post.Walking_Lunge}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Calf_Raises %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Calf Raises</h2>
+			<h3>{{post.Calf_Raises}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Push_Ups %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Push Ups</h2>
+			<h3>{{post.Push_Ups}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Hip_Thrust %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Hip Thrust</h2>
+			<h3 >{{post.Hip_Thrust}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		{% if post.Hip_Abduction %}
+		<div style="background-color: #FADCF7">
+			<h2 ">Hip Abduction</h2>
+			<h3>{{post.Hip_Abduction}}</h3>
+			<hr style="clear:both;">
+		</div>
+		{% endif %}
+		
+	
+		<a href='{{ post.link }}' target="blank"><p>{{ post.link }}</p></a>
+		
+			<div style="border-bottom:solid 2px green;width: 60%;margin: auto;"></div>
+	
+	</div>
+{% endfor %}
+
+{% endblock content %}

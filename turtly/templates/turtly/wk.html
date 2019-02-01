@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test wk</title>
+</head>
+<body>
+
+
+
+{% for post in posts %}
+	<div style= "margin:30px;"></div>
+	<div id="study_posts">
+		<h3 style="text-align:left;float:left;">{{ post.date }}</h3>
+		<div class="clr"></div>
+		<p>{{ post.AMOUNT }}</p>
+
+<div style="background-color: red" '>
+		{% if post.Shoulder_Raise %}
+		<h1>Shoulder Raise</h1>
+		<h2>{{post.Shoulder_Raise}}</h2>
+		{% endif %}
+		{% if post.Shoulder_Press %}
+		<h1>Shoulder Press</h1>
+		<h2>{{post.Shoulder_Press}}</h2>
+		{% endif %}
+		{% if post.Overhead_Triceps_Extension %}
+		<h1>Overhead Triceps Extension</h1>
+		<h2>{{post.Overhead_Triceps_Extension}}</h2>
+		{% endif %}
+		{% if post.Dips %}
+		<h1>Dips</h1>
+		<h2>{{post.Dips}}</h2>
+		{% endif %}
+		{% if post.Triceps_Kick_Backs %}
+		<h1>Triceps Kick Backs</h1>
+		<h2>{{post.Triceps_Kick_Backs}}</h2>
+		{% endif %}
+		{% if post.Hammer_Curl %}
+		<h1>Hammer Curl</h1>
+		<h2>{{post.Hammer_Curl}}</h2>
+		{% endif %}
+		{% if post.Inner_Biceps %}
+		<h1>Inner Biceps</h1>
+		<h2>{{post.Inner_Biceps}}</h2>
+		{% endif %}
+		{% if post.Bar_Curl %}
+		<h1>Bar Curl</h1>
+		<h2>{{post.Bar_Curl}}</h2>
+		{% endif %}
+		{% if post.Wrist_Curl %}
+		<h1>Wrist Curl</h1>
+		<h2>{{post.Wrist_Curl}}</h2>
+		{% endif %}
+</div>
+		{% if post.Squat %}
+		<h1>Squats</h1>
+		<h2>{{post.Squat}}</h2>
+		{% endif %}
+		{% if post.Walking_Lunge %}
+		<h1>Walking Lunge</h1>
+		<h2>{{post.Walking_Lunge}}</h2>
+		{% endif %}
+		{% if post.Calf_Raises %}
+		<h1>Calf Raises</h1>
+		<h2>{{post.Calf_Raises}}</h2>
+		{% endif %}
+		{% if post.Push_Ups %}
+		<h1>Push Ups</h1>
+		<h2>{{post.Push_Ups}}</h2>
+		{% endif %}
+		{% if post.Hip_Thrust %}
+		<h1>Hip Thrust</h1>
+		<h2>{{post.Hip_Thrust}}</h2>
+		{% endif %}
+		{% if post.Hip_Abduction %}
+		<h1>Hip Abduction</h1>
+		<h2>{{post.Hip_Abduction}}</h2>
+		{% endif %}
+		
+        {% if post.Trapezius_Shrug %}
+		<h1>Trapezius Shrug</h1>
+		<h2>{{post.Trapezius_Shrug}}</h2>
+		{% endif %}
+		{% if post.Reverse_Fly %}
+		<h1>Reverse Fly</h1>
+		<h2>{{post.Reverse_Fly}}</h2>
+		{% endif %}
+		{% if post.Dumbell_Row %}
+		<h1>Dumbell Row</h1>
+		<h2>{{post.Dumbell_Row}}</h2>
+		{% endif %}
+		{% if post.Roman_Chair %}
+		<h1>Roman Chair</h1>
+		<h2>{{post.Roman_Chair}}</h2>
+		{% endif %}
+
+    	{% if post.Bench_Press %}
+		<h1>Bench Press</h1>
+		<h2>{{post.Bench_Press}}</h2>
+		{% endif %}
+		{% if post.Dumbell_Press %}
+		<h1>Dumbell Press</h1>
+		<h2>{{post.Dumbell_Press}}</h2>
+		{% endif %}
+		{% if post.Fly %}
+		<h1>Fly</h1>
+		<h2>{{post.Fly}}</h2>
+		{% endif %}
+		{% if post.Push_Ups %}
+		<h1>Push Ups</h1>
+		<h2>{{post.Push_Ups}}</h2>
+		{% endif %}
+		
+		{% if post.link == 'None for now' %}
+		<p id="post_link">{{ post.link }}</p>
+		{% else %}
+		<a href='{{ post.link }}' target="blank"><p>{{ post.link }}</p></a>
+		{% endif %}
+		{% if post.completed == True %}
+			<div style="border-bottom:solid 2px green;width: 60%;margin: auto;"></div>
+		{% else %}
+			<div style="border-bottom:solid 2px red;width: 60%;margin: auto;"></div>
+		{% endif %}	
+	</div>
+{% endfor %}
+
+
+
+</body>
+</html>

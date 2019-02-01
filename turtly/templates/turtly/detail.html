@@ -1,0 +1,54 @@
+{% extends "turtly/base.html" %}
+
+{% block content %}
+<div style="margin-top:40px" > </div>
+	<div id="study_posts">
+		<table style="width: 100%">
+		{% if object.Study_Type_Entries == 'PRG' %}
+			<td style="width: 60px">
+			<img src="https://cdn3.iconfinder.com/data/icons/online-marketing-vol-1/72/24-512.png" width="40">
+			</td>
+		{% endif %}
+		{% if object.Study_Type_Entries == 'DEV' %}
+		<td style="width: 60px">
+			<img src="https://cdn3.iconfinder.com/data/icons/devops-cycle/25/devops_cycle_1-512.png" width="50">
+		</td>
+		{% endif %}
+
+		{% if object.Study_Type_Entries == 'ADM' %}
+		<td style="width: 60px">
+			<img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-512.png" width="50">
+		</td>
+		{% endif %}
+		{% if object.Study_Type_Entries == 'LNG' %}
+		<td>
+			<img src="https://cdn0.iconfinder.com/data/icons/germany-5/500/SingleMonochromeGermanyAlice_8-512.png" width="50">
+		</td>
+		{% endif %}
+		{% if object.Study_Type_Entries == 'OTH' %}
+		<td>
+			<img src="https://www.freeiconspng.com/uploads/idea-icon-12.png" width="50">
+		</td>
+		{% endif %}
+		</td>
+		<td id="title_post">
+		{{ object.get_html_urls }}
+		</td>
+		<td style="text-align:left;float:right;">
+		<h3>{{ object.date|date:"F, d, Y" }}</h3>
+		</td>
+		</table>
+		<div class="clr"></div>
+		<p>{{ object.content }}</p>
+		{% if object.link == 'None for now' %}
+		<div align="center">{{ object.link }}</div>
+		{% else %}
+		<a href='{{ post.link }}' target="blank"><p>{{ object.link }}</p></a>
+		{% endif %}
+		{% if object.completed == True %}
+			<div style="border-bottom:solid 2px green;width: 60%;margin: auto;"></div>
+		{% else %}
+			<div style="border-bottom:solid 2px red;width: 60%;margin: auto;"></div>
+		{% endif %}	
+	</div>
+{% endblock content %}

@@ -1,0 +1,108 @@
+{% extends "turtly/base.html" %}
+
+
+{% block content %}
+<div id="titles">
+	<table>
+			<tr>
+				<td ><h1>Studies</h1></td>
+				<td width="10%" align="right" style="margin: 0px"></td>
+      		</tr>
+      </table>
+</div>
+
+
+		<form method="POST">
+		{% csrf_token %}
+		<br>
+		<div id="post" align="center">      		  
+			
+			{{ form.as_p }}
+			<button type="submit"> Submit </button>
+			
+
+   		 </div>
+	
+		</form>
+
+
+	{% for study in studies %}
+	<div style= "margin:30px;"></div>
+	<div id="study_posts">
+		<table style="width: 100%">
+		{% if study.Study_Type_Entries == 'PRG' %}
+			<td style="width: 60px">
+			<img src="https://cdn3.iconfinder.com/data/icons/online-marketing-vol-1/72/24-512.png" width="40">
+				</td>
+		{% endif %}
+		{% if study.Study_Type_Entries == 'DEV' %}
+		<td style="width: 60px">
+			<img src="https://cdn3.iconfinder.com/data/icons/devops-cycle/25/devops_cycle_1-512.png" width="50">
+				</td>
+		{% endif %}
+		{% if study.Study_Type_Entries == 'ADM' %}
+		<td style="width: 60px">
+			<img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-512.png" width="50">
+		</td>
+		{% endif %}
+		{% if study.Study_Type_Entries == 'LNG' %}
+		<td style="width: 60px">
+			<img src="https://cdn0.iconfinder.com/data/icons/germany-5/500/SingleMonochromeGermanyAlice_8-512.png" width="50">
+		</td>
+
+		{% endif %}
+		{% if study.Study_Type_Entries == 'OTH' %}
+		<td style="width: 60px">
+			<img src="https://www.freeiconspng.com/uploads/idea-icon-12.png" width="50">
+		</td>
+
+		{% endif %}
+		</td>
+		<td id="title_post"">
+		{{ study.get_html_urls }}
+		</td>
+		<td style="text-align:left;float:right;">
+		<h3>{{ study.date|date:"F, d, Y" }}</h3>
+		</td>
+		</table>
+		<div class="clr"></div>
+		<p>{{ study.content }}</p>
+		{% if study.link == 'None for now' %}
+		<div align="center">{{ study.link }}</div>
+		{% else %}
+		<a href='{{ post.link }}' target="blank"><p>{{ study.link }}</p></a>
+		{% endif %}
+		{% if study.completed == True %}
+			<div style="border-bottom:solid 2px green;width: 60%;margin: auto;"></div>
+		{% else %}
+			<div style="border-bottom:solid 2px red;width: 60%;margin: auto;"></div>
+		{% endif %}	
+	</div>
+	{% endfor %}
+<div align="center">
+{% if studies.has_other_pages %}
+  <ul style="list-style-type: none;white-space:nowrap;" >
+    {% if studies.has_previous %}
+      <li style="display:inline-block;"><a href="?page={{ studies.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li style="display:inline-block;"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in studies.paginator.page_range %}
+      {% if studies.number == i %}
+        <li style="display:inline-block;"><span>{{ i }}</span></li>
+      {% else %}
+        <li style="display:inline-block;"><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if studies.has_next %}
+      <li style="display:inline-block;"><a href="?page={{ studies.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li style="display:inline-block;"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+  </div>
+{% endif %}
+
+
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	{% if title %}
+		<title>Turtly Scheduler - {{ title }}</title>
+	{% else %}
+		<title>Turtly Scheduler </title>
+	{% endif %}	
+	<link rel="stylesheet" type="text/css" href="{% static 'turtly/style.css' %}">
+</head>
+<body>
+	<header id="main-header">
+		<table>
+			<tr>
+				<td ><h1>Turtly Scheduler</h1></td>
+				<td width="10%" align="right" style="margin: 0px"><table>
+      			</table></td>
+      		</tr>
+      </table>
+	</header>
+ 	<div>
+ 		<a href="{% url 'turtly-home' %}"><button id="button">Home</button></a>
+ 		<a href="{% url 'turtly-studies' %}"><button id="button">Studies</button></a>
+ 		<a href="{% url 'turtly-workout' %}"><button id="button">Work out</button></a>
+ 		<a href="#"><button id="button">Language</button></a>
+	</div>
+	<div class="clr"></div>
+
+	{% if messages %}
+	<div style="height: 20px; background-color: green">
+	    		{% for message in messages %}
+	    			<div class="alert alert-{{ message.tags }}"> 
+	    				{{ message }}
+	    			</div>
+	    		{% endfor %}
+	</div>
+	{% endif %}
+	{% block content %}{% endblock %}
+
+</body>
+</html>

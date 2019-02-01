@@ -1,0 +1,4 @@
+Django==2.1.5
+MonthDelta==0.9.1
+pytz==2018.9
+psycopg2>=2.6.1

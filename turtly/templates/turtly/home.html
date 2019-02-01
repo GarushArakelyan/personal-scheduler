@@ -1,0 +1,12 @@
+{% extends "turtly/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="clearfix">
+<a class="btn left"  href="{% url 'turtly-home' %}?{{ prev_month }}"> Previous Month </a>
+<a class="btn right"  href="{% url 'turtly-home' %}?{{ next_month }}"> Next Month </a>
+</div>
+
+{{calendar}}
+
+{% endblock content %}

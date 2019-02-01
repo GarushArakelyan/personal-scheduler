@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'turtly/style.css' %}">
+</head>
+<header id="main-header">
+		<table>
+			<tr>
+				<td ><h1>Turtly Scheduler</h1></td>
+				<td width="10%" align="right" style="margin: 0px"><table>
+      			</table></td>
+      		</tr>
+      </table>
+	</header>
+<body>
+<div id="titles">
+	<table>
+			<tr>
+				<td ><h1>Login</h1></td>
+				<td width="10%" align="center" style="margin: 0px"></td>
+      		</tr>
+      </table>
+</div>
+
+
+		<form method="POST">
+		{% csrf_token %}
+		<br>
+		<div id="post" align="center">      		  
+			
+			{{ form.as_p }}
+			<button type="submit"> Log In </button>
+			
+
+   		 </div>
+	
+		</form>
+</body>
