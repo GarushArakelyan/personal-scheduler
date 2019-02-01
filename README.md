@@ -1,18 +1,18 @@
-django personal-scheduler
-Studies and workouts scheduling app built using Django 
+personal-scheduler<br>
+Studies and workouts scheduling app built using Django <br>
 
 Usage <br>
 Clone this repo, setup virtualenv, install Django
 
-git clone https://github.com/huiwenhw/django-calendar
-cd django-calendar
+git clone https://github.com/GarushArakelyan/personal-scheduler <br>
 
-virtualenv env
-source env/bin/activate
-pip3 install -r requirements.txt
+cd personal-scheduler
+virtualenv env <br>
+source env/bin/activate <br>
+pip3 install -r requirements.txt <br>
 
-python3 manage.py migrate
-python3 manage.py runserver
-python3 manage.py createsuperuser
+python3 manage.py migrate <br>
+python3 manage.py runserver <br>
+python3 manage.py createsuperuser <br>
 
 run app at http://localhost:8000/
