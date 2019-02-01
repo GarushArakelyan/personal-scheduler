@@ -6,7 +6,7 @@ Clone this repo, setup virtualenv, install Django
 
 git clone https://github.com/GarushArakelyan/personal-scheduler <br>
 
-cd personal-scheduler
+cd personal-scheduler <br>
 virtualenv env <br>
 source env/bin/activate <br>
 pip3 install -r requirements.txt <br>
