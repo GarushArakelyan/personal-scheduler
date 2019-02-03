@@ -25,8 +25,10 @@ class Calendario(HTMLCalendar):
 			if workout_to_calendar(day, self.month, self.year):
 				#print('received true for ' + str(day) + str(self.month) + str(self.year))
 				
-				if self.month < 10: month = str('0')+ str(self.month)
-				else: month = self.month
+				if self.month < 10: 
+					month = str('0')+ str(self.month)
+				else: 
+					month = self.month
 				if day < 10: day_string = str('0')+ str(day) 
 
 				d += f'<a href=" workout/{self.year}-{month}-{day} "> workout day</a><br>'

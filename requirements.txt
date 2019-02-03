@@ -1,4 +1,7 @@
+dj-database-url==0.5.0
 Django==2.1.5
 MonthDelta==0.9.1
 pytz==2018.9
+dj-static==0.0.6
+gunicorn==19.9.0
 psycopg2>=2.6.1

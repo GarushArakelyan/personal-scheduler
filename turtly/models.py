@@ -189,7 +189,7 @@ class Workout(models.Model):
         ('Dips', 'Dips'),
         ('Triceps_Kick_Backs', 'Triceps Kick Backs'),
         ('Hammer_Curl', 'Hammer Curl'),
-        ('Inner_Biceps Curl', 'Inner Biceps Curl'),
+        ('Inner_Biceps_Curl', 'Inner Biceps Curl'),
         ('Bar_Curl', 'Bar Curl'),
         ('Wrist_Curl', 'Wrist Curl')
     )
@@ -204,7 +204,7 @@ class Workout(models.Model):
         ('Squat', 'Squat'),
         ('Walking_Lunge', 'Walking Lunge'),
         ('Calf_Raises', 'Calf Raises'),
-        ('Push_Ups', 'Push Ups'),
+        ('Push_Ups_Leg', 'Push Ups'),
         ('Hip_Thrust', 'Hip Thrust'),
         ('Hip_Abduction', 'Hip Abduction'),
 

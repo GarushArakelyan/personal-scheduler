@@ -79,6 +79,9 @@ h2{
 	box-sizing: border-box;
 	margin:0;
 	padding: 0;
+	font-size: 1.8em;
+	width: 100%;
+	float:none;
 	}
 #nav-bar a{
 	text-decoration: none;
@@ -111,7 +114,7 @@ h2{
     text-decoration: none;
     display: inline-block;
     width: 25%;
-    font-size: 16px;
+    font-size: 24px;
     float: left;
 	box-sizing: border-box;
 	}
@@ -147,8 +150,9 @@ h2{
 	border-width: 1px;
 	border-style: solid;
 	padding: 10px;
-	width: 60%;
+	width: 90%;
 	margin: auto;
+
 }
 #training_posts {
 	border-radius: 40px;
@@ -188,10 +192,42 @@ h2{
 	border-width: 1px;
 	border-style: solid;
 	padding: 10px;
-	width: 35%;
+	width: 70%;
 	margin: auto;
 	background-color: #E5F6E8;
+	font-family: Andale Mono;
+	font-size: 30px;
 }
+#post select{
+
+    font-family: Andale Mono;
+	font-size: 20px;
+
+}
+
+#id_content{
+	font-family: Andale Mono;
+	font-size: 20px;
+
+}
+
+#id_link{
+	font-family: Andale Mono;
+	font-size: 20px;
+
+}
+#id_date{
+	font-family: Andale Mono;
+	font-size: 20px;
+
+}
+
+#id_AMOUNT{
+	font-family: Andale Mono;
+	font-size: 20px;
+
+}
+
 #study_posts h2 {
 	font-size: 1.4em;
 	border-bottom: solid;
@@ -209,6 +245,7 @@ h2{
 }
 #study_posts p{
 	font-family:Andale Mono, monospace;
+	font-size:35px;
 }
 #workout {
 	border-radius: 20px;
@@ -219,23 +256,56 @@ h2{
 	padding: 10px;
 	margin: 10px;
 	background-color: #E5F6E8;
+	font-size: 30px;
 }
 #workout ul {
   list-style-type: none;
   margin:10px;
+  padding: 0px;
+}
+#workout li {
+  padding: 5px;
+  font-family:Andale Mono;
 }
 #workout h2 {
-  font-family:Andale Mono, monospace;
+  font-family:Andale Mono;
   font-weight: 2em;
 }
+#workout p {
+  font-family:Andale Mono;
+  font-size:20px;
+  
+}
+#workout button {
+        width: 100%;
+        height: 45px;
+        -moz-box-shadow:inset 0px 1px 0px 0px #276873;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #276873;
+		box-shadow:inset 0px 1px 0px 0px #276873;
+		background-color:#599bb3;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		border:1px solid #29668f;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:13px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #3d768a;
+
+  }
 
 #container p{
 	margin: 0;
+
 }
 footer{
 	margin-top:200px;
 }
-@media(max-width: 550px){
+
+@media(max-width: 900px){
 	#button{
 		width: 100%;
 		float:none;
@@ -259,6 +329,8 @@ footer{
 
 table {
     border-collapse: collapse;
+    font-size: 28px;
+
 }
 tbody {
     display: table-row-group;
@@ -266,6 +338,7 @@ tbody {
     border-color: inherit;
 }
 .calendar tr {
+	font-size: 30px;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -280,11 +353,14 @@ tbody {
     border-collapse: collapse;
 }
 .calendar td {
+	font-size: 30px;
     width: 200px;
     height: 60px;
-    padding: 20px 0px 0px 5px;
+    padding: 45px 0px 0px 5px;
     border-collapse: collapse;
+    
 }
+
 ul {
     height: 100%;
     padding: 0px 5px 0px 20px;
@@ -294,6 +370,8 @@ ul {
     font-family:Andale Mono, monospace;
 
 }
+
+
 .date {
     font-size: 16px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -365,7 +443,8 @@ ul {
 .calendar {
   width: 95%;
   margin: auto;
-  font-size: 13px;
+  font-size: 25px;
+  font-family: Andale Mono;
   border-collapse: collapse;
 }
 
@@ -382,7 +461,7 @@ ul {
 .calendar td {
   width: 200px;
   height: 100px;
-  padding: 20px 0px 0px 5px;
+  padding: 45px 0px 0px 5px;
 }
 
 .month {
@@ -391,6 +470,7 @@ ul {
 
 .date {
   font-size: 16px;
+  font-family: Arial;
 }
 
 ul {
@@ -429,4 +509,5 @@ a.button:hover  {
 	text-decoration: none; 
 	font-family: Andale Mono, 
 	monospace;
+	width: 50%;
 }

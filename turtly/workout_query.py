@@ -6,16 +6,12 @@ def aver(obju):
 	DIA = ''
 	first_enter = True
 	my_context= []
-	print(obju)
-	print('este es el 1')
+
 	for objeto in obju:
 		dia= str(objeto)
 		if first_enter== True:
 			DIA= dia
 		#if dia ==! DIA:
-
-
-		print(me[:10])
 
 def workout_to_calendar(day, month, year):
 	datik = datetime.date(datetime(year, month, day))
@@ -57,9 +53,9 @@ def workout_to_post(context_proto):
 		Values['date']= context['date']
 		#print('this is the context: ' + str(context))
 		for post in posts:
-			print(str(context['date']))
+			#print(str(context['date']))
 			if str(post.date)[:10] == str(context['date']):
-				print(str(post.date)[:10] == str(context['date']))
+				#print(str(post.date)[:10] == str(context['date']))
 				#print(post + 'time is not eqaul to ' + str(context['date'])
 				if str(post.BACK_EX) != '':
 					Values[str(post.BACK_EX)]= str(post.AMOUNT)
@@ -72,7 +68,7 @@ def workout_to_post(context_proto):
 
 		context_novo.append(Values)
 		Values = {}
-	print(context_novo)
+	#print(context_novo)
 	return(context_novo)
 
 
