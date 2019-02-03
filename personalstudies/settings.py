@@ -115,6 +115,7 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
@@ -122,3 +123,26 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='turtly-home'
 LOGIN_URL='turtly-login'
 
+ # Heroku settings
+cwd = os.getcwd()
+if cwd == '/app' or cwd[:4] == '/tmp':
+    import dj_database_url
+    DATABASES = {
+    'default': dj_database_url.config(default='postgres://localhost')
+    }
+   # DEBUG = False
+    # Add to this list all the locations containing your static files 
+
+
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure().
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers.
+    ALLOWED_HOSTS = ['*']
+# Static asset configuration
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_URL = '/staticfiles/'
+    STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'turtly/static/'),
+    )
