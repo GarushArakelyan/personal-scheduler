@@ -31,7 +31,7 @@ class Calendario(HTMLCalendar):
 					month = self.month
 				if day < 10: day_string = str('0')+ str(day) 
 
-				d += f'<a href=" workout/{self.year}-{month}-{day} "> workout day</a><br>'
+				d += f'<a href=" workout/{self.year}-{month}-{day_string} "> workout day</a><br>'
 				for event in events_per_day:
 					if str(event.get_username) == self.user:
 						d += f' {event.get_html_url}<br>'

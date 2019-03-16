@@ -144,10 +144,11 @@ def workout(request):
         WOArmForm = WorkoutArmsForm()
         WOLegsForm = WorkoutLegsForm()
 
-    
-    post = Workout.objects.extra(select={'day': 'date( date )'}).values('day').annotate(available=Count('date'))
+    #post = Workout.objects.extra(select={'day': 'date( date )'}).values('day').annotate(available=Count('date'))
     context = {'arms': WOArmForm, 'back': WOBackForm, 'chest': WOChestForm, 'legs': WOLegsForm, 'posts':workout_get_dates()}
     return render(request, 'turtly/workout.html', context)
+
+
 
 
 def particular(request, days):
@@ -155,6 +156,7 @@ def particular(request, days):
     dict_ = {}
     dict_['date']= days
     list_.append(dict_)
+    print(list_)
     context = {'posts': workout_to_post(list_)}
     return render(request, 'turtly/workout-detail.html', context)
 

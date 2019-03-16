@@ -28,7 +28,7 @@ def workout_get_dates():
 	context_proto= []
 	list_empty = True
 	posts_combined= Workout.objects.extra(select={'day': 'date(date)'}).values('day').annotate(available=Count('date'))
-
+	posts_combined.order_by('-date')
 	for post in posts_combined:
 		first = ' '
 		if list_empty:
