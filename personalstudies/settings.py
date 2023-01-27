@@ -25,7 +25,7 @@ SECRET_KEY = ')olq((n=cy46_d_cbhy8zos&l$b#^u^adppaegmf(=#mm&$1@+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
